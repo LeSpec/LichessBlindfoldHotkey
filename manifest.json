@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Lichess Blindfold Hotkey",
+  "version": "1.0",
+  "description": "Press b to toggle blindfold mode.",
+  "icons": {
+      "48": "icons/knight_small.png",
+      "96": "icons/knight_large.png",
+      "640": "icons/knight.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.lichess.org/*"
+      ],
+      "js": [
+        "libs/mousetrap.min.js",
+        "blindfold.js"
+      ]
+    }
+  ]
+}
